@@ -32,3 +32,5 @@ use Mix.Config
 config :kv, :routing_table,
        [{?a..?m, :"foo@MBP-Artem"},
         {?n..?z, :"bar@MBP-Artem"}]
+
+if Mix.env == :test, do: config :kv, :routing_table, [{?a..?z, :"nonode@nohost"}]
