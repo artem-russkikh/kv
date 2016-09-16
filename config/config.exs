@@ -28,3 +28,7 @@ use Mix.Config
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env}.exs"
+
+config :kv, :routing_table,
+       [{?a..?m, :"foo@MBP-Artem"},
+        {?n..?z, :"bar@MBP-Artem"}]

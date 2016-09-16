@@ -27,11 +27,11 @@ defmodule KV.Router do
     raise "could not find entry for #{inspect bucket} in table #{inspect table}"
   end
 
+
   @doc """
   The routing table.
   """
   def table do
-    [{?a..?m, :"foo@MBP-Artem"},
-     {?n..?z, :"bar@MBP-Artem"}]
+    Application.fetch_env!(:kv, :routing_table)
   end
 end

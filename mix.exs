@@ -19,6 +19,7 @@ defmodule KV.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [applications: [:logger],
+     env: [routing_table: []],
      mod: {KV, []}]
   end
 
